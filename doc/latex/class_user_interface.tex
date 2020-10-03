@@ -1,0 +1,309 @@
+\hypertarget{class_user_interface}{}\section{User\+Interface Class Reference}
+\label{class_user_interface}\index{UserInterface@{UserInterface}}
+
+
+{\ttfamily \#include $<$User\+Interface.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_user_interface_a63387b09d5225cfeb5c76582a6131b6c}{Run}} ()
+\item 
+void \mbox{\hyperlink{class_user_interface_a82de92f26f83e2ecaffa1c6ebd8accdb}{Clear}} ()
+\item 
+void \mbox{\hyperlink{class_user_interface_a011662c4d62cf2ee170b151f8c9ae522}{Help}} ()
+\item 
+void \mbox{\hyperlink{class_user_interface_a1b3e14c742df39d1da1c9bcb67797afb}{Quit}} ()
+\item 
+void \mbox{\hyperlink{class_user_interface_af85f52822f67c39feef07d7efe5d64ca}{Matrix\+Help}} ()
+\item 
+void \mbox{\hyperlink{class_user_interface_a446c2436cb7b4743317307d9afc9b779}{Complex\+Calc}} ()
+\item 
+void \mbox{\hyperlink{class_user_interface_af2f9a9e8ef0e73d709d2dd2969d7d777}{Print\+Var}} (char \&input) const
+\item 
+void \mbox{\hyperlink{class_user_interface_a481ef0dc164fa83707699300d7d8b723}{Save\+Matrix}} (\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&m, char \&var)
+\item 
+bool \mbox{\hyperlink{class_user_interface_a3c681f0d9a46f4dde3df29066e68c3a9}{Create\+Matrix}} (std\+::string \&input)
+\item 
+bool \mbox{\hyperlink{class_user_interface_a99111fb99085efacd054e8c2e00f694b}{Transpose\+Matrix}} (std\+::string \&input)
+\item 
+bool \mbox{\hyperlink{class_user_interface_ad0bb8a04c4f0f719bbe132da5bcdb4cd}{Rank\+Matrix}} (std\+::string \&input)
+\item 
+bool \mbox{\hyperlink{class_user_interface_a177531c4687cffac01991749df5ad98a}{Det\+Matrix}} (std\+::string \&input)
+\item 
+bool \mbox{\hyperlink{class_user_interface_a4401c31d4d576435c580f9d92b5e2c85}{Inverse\+Matrix}} (std\+::string \&input)
+\item 
+bool \mbox{\hyperlink{class_user_interface_ac9e54720a9056bb619910ea83743c63d}{Gem\+Matrix}} (std\+::string \&input)
+\item 
+bool \mbox{\hyperlink{class_user_interface_af7f6c880f4be7faef6a97cd568703f40}{Concatenate\+Matrix}} (std\+::string \&input)
+\item 
+bool \mbox{\hyperlink{class_user_interface_a61b646c8242529a3bff85242aa1f2d2b}{Split\+Matrix}} (std\+::string \&input)
+\item 
+bool \mbox{\hyperlink{class_user_interface_a0c002675ff974a25b23466629397b08a}{Basic\+Operations}} (std\+::string \&input, size\+\_\+t pos)
+\item 
+\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_user_interface_a7b28a49562754ca62e4c06d4398e1c7a}{Matrix\+And\+Matrix}} (char \&m1, char \&m2, char \&sign)
+\item 
+\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_user_interface_a1d020a654356d50763bd4437ce632223}{Matrix\+And\+Number}} (char \&m, double \&n, char \&sign)
+\item 
+double \mbox{\hyperlink{class_user_interface_aee627f438b090059ad3c8af6b7cdd3fa}{Number\+And\+Number}} (double \&d1, double \&d2, char \&sign)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that creates users interface Users working with the program using commands,variables and operators \mbox{\hyperlink{class_user_interface}{User\+Interface}} takes those commands, checks their validity and then passes the arguments for calculation It also stores matrices assigned to variables and performs some basic operations(+,-\/,$\ast$) on its own 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_interface_a0c002675ff974a25b23466629397b08a}\label{class_user_interface_a0c002675ff974a25b23466629397b08a}} 
+\index{UserInterface@{UserInterface}!BasicOperations@{BasicOperations}}
+\index{BasicOperations@{BasicOperations}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{BasicOperations()}{BasicOperations()}}
+{\footnotesize\ttfamily bool User\+Interface\+::\+Basic\+Operations (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input,  }\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption})}
+
+Function that decides which basic operation($\ast$,-\/,+) to be performed Also determines if it\textquotesingle{}s to be perfomed on matrix and matrix/number and matrix/number and number 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if operation was successful, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_a82de92f26f83e2ecaffa1c6ebd8accdb}\label{class_user_interface_a82de92f26f83e2ecaffa1c6ebd8accdb}} 
+\index{UserInterface@{UserInterface}!Clear@{Clear}}
+\index{Clear@{Clear}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void User\+Interface\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that clears all stored matrices and variables \mbox{\Hypertarget{class_user_interface_a446c2436cb7b4743317307d9afc9b779}\label{class_user_interface_a446c2436cb7b4743317307d9afc9b779}} 
+\index{UserInterface@{UserInterface}!ComplexCalc@{ComplexCalc}}
+\index{ComplexCalc@{ComplexCalc}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{ComplexCalc()}{ComplexCalc()}}
+{\footnotesize\ttfamily void User\+Interface\+::\+Complex\+Calc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that prints instructions for complex calculations \mbox{\Hypertarget{class_user_interface_af7f6c880f4be7faef6a97cd568703f40}\label{class_user_interface_af7f6c880f4be7faef6a97cd568703f40}} 
+\index{UserInterface@{UserInterface}!ConcatenateMatrix@{ConcatenateMatrix}}
+\index{ConcatenateMatrix@{ConcatenateMatrix}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{ConcatenateMatrix()}{ConcatenateMatrix()}}
+{\footnotesize\ttfamily bool User\+Interface\+::\+Concatenate\+Matrix (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Function that takes input and concatenates 2 matrices together 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if operation was successful, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_a3c681f0d9a46f4dde3df29066e68c3a9}\label{class_user_interface_a3c681f0d9a46f4dde3df29066e68c3a9}} 
+\index{UserInterface@{UserInterface}!CreateMatrix@{CreateMatrix}}
+\index{CreateMatrix@{CreateMatrix}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{CreateMatrix()}{CreateMatrix()}}
+{\footnotesize\ttfamily bool User\+Interface\+::\+Create\+Matrix (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Function that transforms Dense matrix into Sparse Used before saving matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a Sparse\+Matrix\+Function that takes input and creates matrix out of it 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if creation was successful, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_a177531c4687cffac01991749df5ad98a}\label{class_user_interface_a177531c4687cffac01991749df5ad98a}} 
+\index{UserInterface@{UserInterface}!DetMatrix@{DetMatrix}}
+\index{DetMatrix@{DetMatrix}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{DetMatrix()}{DetMatrix()}}
+{\footnotesize\ttfamily bool User\+Interface\+::\+Det\+Matrix (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Function that takes input and gets determinant of matrix out of it 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if operation was successful, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_ac9e54720a9056bb619910ea83743c63d}\label{class_user_interface_ac9e54720a9056bb619910ea83743c63d}} 
+\index{UserInterface@{UserInterface}!GemMatrix@{GemMatrix}}
+\index{GemMatrix@{GemMatrix}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{GemMatrix()}{GemMatrix()}}
+{\footnotesize\ttfamily bool User\+Interface\+::\+Gem\+Matrix (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Function that takes input and performs Gaussian elimination with matrix out of it 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if operation was successful, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_a011662c4d62cf2ee170b151f8c9ae522}\label{class_user_interface_a011662c4d62cf2ee170b151f8c9ae522}} 
+\index{UserInterface@{UserInterface}!Help@{Help}}
+\index{Help@{Help}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{Help()}{Help()}}
+{\footnotesize\ttfamily void User\+Interface\+::\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that prints some help commands \mbox{\Hypertarget{class_user_interface_a4401c31d4d576435c580f9d92b5e2c85}\label{class_user_interface_a4401c31d4d576435c580f9d92b5e2c85}} 
+\index{UserInterface@{UserInterface}!InverseMatrix@{InverseMatrix}}
+\index{InverseMatrix@{InverseMatrix}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{InverseMatrix()}{InverseMatrix()}}
+{\footnotesize\ttfamily bool User\+Interface\+::\+Inverse\+Matrix (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Function that takes input and gets inverse of matrix out of it 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if operation was successful, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_a7b28a49562754ca62e4c06d4398e1c7a}\label{class_user_interface_a7b28a49562754ca62e4c06d4398e1c7a}} 
+\index{UserInterface@{UserInterface}!MatrixAndMatrix@{MatrixAndMatrix}}
+\index{MatrixAndMatrix@{MatrixAndMatrix}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{MatrixAndMatrix()}{MatrixAndMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} User\+Interface\+::\+Matrix\+And\+Matrix (\begin{DoxyParamCaption}\item[{char \&}]{m1,  }\item[{char \&}]{m2,  }\item[{char \&}]{sign }\end{DoxyParamCaption})}
+
+Function that performs basic operations on matrix and another matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & m1 variable of first matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em char} & m1 variable of second matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em char} & sign that determines the operation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns result matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_a1d020a654356d50763bd4437ce632223}\label{class_user_interface_a1d020a654356d50763bd4437ce632223}} 
+\index{UserInterface@{UserInterface}!MatrixAndNumber@{MatrixAndNumber}}
+\index{MatrixAndNumber@{MatrixAndNumber}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{MatrixAndNumber()}{MatrixAndNumber()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} User\+Interface\+::\+Matrix\+And\+Number (\begin{DoxyParamCaption}\item[{char \&}]{m,  }\item[{double \&}]{n,  }\item[{char \&}]{sign }\end{DoxyParamCaption})}
+
+Function that performs basic operations on matrix and number 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m1} & variable of the matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em d1} & number that the matrix is operated by \\
+\hline
+\mbox{\texttt{ in}}  & {\em sign} & that determines the operation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns result matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_af85f52822f67c39feef07d7efe5d64ca}\label{class_user_interface_af85f52822f67c39feef07d7efe5d64ca}} 
+\index{UserInterface@{UserInterface}!MatrixHelp@{MatrixHelp}}
+\index{MatrixHelp@{MatrixHelp}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{MatrixHelp()}{MatrixHelp()}}
+{\footnotesize\ttfamily void User\+Interface\+::\+Matrix\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that prints instructions on how to work with matrices \mbox{\Hypertarget{class_user_interface_aee627f438b090059ad3c8af6b7cdd3fa}\label{class_user_interface_aee627f438b090059ad3c8af6b7cdd3fa}} 
+\index{UserInterface@{UserInterface}!NumberAndNumber@{NumberAndNumber}}
+\index{NumberAndNumber@{NumberAndNumber}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{NumberAndNumber()}{NumberAndNumber()}}
+{\footnotesize\ttfamily double User\+Interface\+::\+Number\+And\+Number (\begin{DoxyParamCaption}\item[{double \&}]{d1,  }\item[{double \&}]{d2,  }\item[{char \&}]{sign }\end{DoxyParamCaption})}
+
+Function that performs basic operations on number and number 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d1} & the first number \\
+\hline
+\mbox{\texttt{ in}}  & {\em d2} & the second number \\
+\hline
+\mbox{\texttt{ in}}  & {\em sign} & that determines the operation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns result number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_af2f9a9e8ef0e73d709d2dd2969d7d777}\label{class_user_interface_af2f9a9e8ef0e73d709d2dd2969d7d777}} 
+\index{UserInterface@{UserInterface}!PrintVar@{PrintVar}}
+\index{PrintVar@{PrintVar}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{PrintVar()}{PrintVar()}}
+{\footnotesize\ttfamily void User\+Interface\+::\+Print\+Var (\begin{DoxyParamCaption}\item[{char \&}]{input }\end{DoxyParamCaption}) const}
+
+Function that prints matrix assigned to passed variable 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em var} & Variable printed matrix is assigned to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_interface_a1b3e14c742df39d1da1c9bcb67797afb}\label{class_user_interface_a1b3e14c742df39d1da1c9bcb67797afb}} 
+\index{UserInterface@{UserInterface}!Quit@{Quit}}
+\index{Quit@{Quit}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{Quit()}{Quit()}}
+{\footnotesize\ttfamily void User\+Interface\+::\+Quit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that turns the program off \mbox{\Hypertarget{class_user_interface_ad0bb8a04c4f0f719bbe132da5bcdb4cd}\label{class_user_interface_ad0bb8a04c4f0f719bbe132da5bcdb4cd}} 
+\index{UserInterface@{UserInterface}!RankMatrix@{RankMatrix}}
+\index{RankMatrix@{RankMatrix}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{RankMatrix()}{RankMatrix()}}
+{\footnotesize\ttfamily bool User\+Interface\+::\+Rank\+Matrix (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Function that takes input and gets rank of matrix out of it 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if operation was successful, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_a63387b09d5225cfeb5c76582a6131b6c}\label{class_user_interface_a63387b09d5225cfeb5c76582a6131b6c}} 
+\index{UserInterface@{UserInterface}!Run@{Run}}
+\index{Run@{Run}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void User\+Interface\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that is basically a while loop in which the program runs \mbox{\Hypertarget{class_user_interface_a481ef0dc164fa83707699300d7d8b723}\label{class_user_interface_a481ef0dc164fa83707699300d7d8b723}} 
+\index{UserInterface@{UserInterface}!SaveMatrix@{SaveMatrix}}
+\index{SaveMatrix@{SaveMatrix}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{SaveMatrix()}{SaveMatrix()}}
+{\footnotesize\ttfamily void User\+Interface\+::\+Save\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{m,  }\item[{char \&}]{var }\end{DoxyParamCaption})}
+
+Function that saves matrix and its assigned variable It\textquotesingle{}s also determines if the matrix is to be saved as sparse or dense In case it transforms it to sparse since calculations are done with dense matrices 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em M} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} to be saved \\
+\hline
+\mbox{\texttt{ in}}  & {\em var} & Variable to be saved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_interface_a61b646c8242529a3bff85242aa1f2d2b}\label{class_user_interface_a61b646c8242529a3bff85242aa1f2d2b}} 
+\index{UserInterface@{UserInterface}!SplitMatrix@{SplitMatrix}}
+\index{SplitMatrix@{SplitMatrix}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{SplitMatrix()}{SplitMatrix()}}
+{\footnotesize\ttfamily bool User\+Interface\+::\+Split\+Matrix (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Function that takes input and cuts out matrix out of another 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if operation was successful, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_interface_a99111fb99085efacd054e8c2e00f694b}\label{class_user_interface_a99111fb99085efacd054e8c2e00f694b}} 
+\index{UserInterface@{UserInterface}!TransposeMatrix@{TransposeMatrix}}
+\index{TransposeMatrix@{TransposeMatrix}!UserInterface@{UserInterface}}
+\subsubsection{\texorpdfstring{TransposeMatrix()}{TransposeMatrix()}}
+{\footnotesize\ttfamily bool User\+Interface\+::\+Transpose\+Matrix (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Function that takes input and creates transposed matrix out of it 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if operation was successful, False otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/User\+Interface.\+h\item 
+src/User\+Interface.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,222 @@
+\hypertarget{class_matrix_calc}{}\section{Matrix\+Calc Class Reference}
+\label{class_matrix_calc}\index{MatrixCalc@{MatrixCalc}}
+
+
+{\ttfamily \#include $<$Matrix\+Calc.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_matrix_calc_a8c8922e853ec86d5c65f45daae848b36}{Transpose}} (\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&m)
+\item 
+static \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_matrix_calc_aea2db410b22f84eb9a8a8622c79c8fb2}{Concatenate}} (\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&m, \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&n)
+\item 
+static double \mbox{\hyperlink{class_matrix_calc_a636734e5530c834930b4d3c6ada60a64}{Determinant}} (\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&m, int n)
+\item 
+static unsigned \mbox{\hyperlink{class_matrix_calc_a93e228bda2d54136eed936993511212b}{Rank}} (\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} m)
+\item 
+static \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_matrix_calc_aa108503e6b7e8afc32ce14a6e891a364}{Gem}} (\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} m)
+\item 
+static \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_matrix_calc_a097f01e15bec746e73d4a90308f08564}{Inverse}} (\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&m, double \&det)
+\item 
+static \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_matrix_calc_a498076c4699b1e664c90ba83a28231e5}{Split}} (\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&m, unsigned rows, unsigned cols, unsigned i, unsigned j)
+\item 
+static void \mbox{\hyperlink{class_matrix_calc_a0509681d75bacece9a9254e84c915dcd}{Get\+Cofactor}} (const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&m, \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&temp, int p, int q, int n)
+\item 
+static void \mbox{\hyperlink{class_matrix_calc_ab823f6074e9f9eca84b85316106d6063}{Adjoint}} (const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&m, \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&adj)
+\item 
+static void \mbox{\hyperlink{class_matrix_calc_a5a02ba8bf8e73d8d5799c31f56fad34a}{Swap\+Row}} (\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&m, int i, int j)
+\item 
+static void \mbox{\hyperlink{class_matrix_calc_ae709d5254c9b8d2344cc72a616381ecf}{Add\+Multiple\+Row}} (\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&m, double multiple, int i, int j)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that performs complex matrix computations 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_matrix_calc_ae709d5254c9b8d2344cc72a616381ecf}\label{class_matrix_calc_ae709d5254c9b8d2344cc72a616381ecf}} 
+\index{MatrixCalc@{MatrixCalc}!AddMultipleRow@{AddMultipleRow}}
+\index{AddMultipleRow@{AddMultipleRow}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{AddMultipleRow()}{AddMultipleRow()}}
+{\footnotesize\ttfamily void Matrix\+Calc\+::\+Add\+Multiple\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{m,  }\item[{double}]{multiple,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Help function for performing Gaussian elimination Basically a G3 operation of Gaussian elimination 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em multiple} & number for multiply row \\
+\hline
+\mbox{\texttt{ in}}  & {\em i} & first row \\
+\hline
+\mbox{\texttt{ in}}  & {\em j} & second row \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_matrix_calc_ab823f6074e9f9eca84b85316106d6063}\label{class_matrix_calc_ab823f6074e9f9eca84b85316106d6063}} 
+\index{MatrixCalc@{MatrixCalc}!Adjoint@{Adjoint}}
+\index{Adjoint@{Adjoint}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{Adjoint()}{Adjoint()}}
+{\footnotesize\ttfamily void Matrix\+Calc\+::\+Adjoint (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{m,  }\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{adj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function that return adjoint matrix of matrix to be inversed Help function for getting an inverse of matrices 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} matrix to be inversed \\
+\hline
+\mbox{\texttt{ in}}  & {\em adj} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} matrix to be adjoint \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_matrix_calc_aea2db410b22f84eb9a8a8622c79c8fb2}\label{class_matrix_calc_aea2db410b22f84eb9a8a8622c79c8fb2}} 
+\index{MatrixCalc@{MatrixCalc}!Concatenate@{Concatenate}}
+\index{Concatenate@{Concatenate}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{Concatenate()}{Concatenate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Matrix\+Calc\+::\+Concatenate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{m,  }\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function for concatenating 2 matrices of the same size 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns concatenated matrix of passed matrices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix_calc_a636734e5530c834930b4d3c6ada60a64}\label{class_matrix_calc_a636734e5530c834930b4d3c6ada60a64}} 
+\index{MatrixCalc@{MatrixCalc}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{Determinant()}{Determinant()}}
+{\footnotesize\ttfamily double Matrix\+Calc\+::\+Determinant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{m,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function for getting determinant of matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & number of size of the matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns determinant of passed matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix_calc_aa108503e6b7e8afc32ce14a6e891a364}\label{class_matrix_calc_aa108503e6b7e8afc32ce14a6e891a364}} 
+\index{MatrixCalc@{MatrixCalc}!Gem@{Gem}}
+\index{Gem@{Gem}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{Gem()}{Gem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Matrix\+Calc\+::\+Gem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function for calculating Gaussian elimination of the matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns matrix after Gaussian elimination 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix_calc_a0509681d75bacece9a9254e84c915dcd}\label{class_matrix_calc_a0509681d75bacece9a9254e84c915dcd}} 
+\index{MatrixCalc@{MatrixCalc}!GetCofactor@{GetCofactor}}
+\index{GetCofactor@{GetCofactor}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{GetCofactor()}{GetCofactor()}}
+{\footnotesize\ttfamily void Matrix\+Calc\+::\+Get\+Cofactor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{m,  }\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{temp,  }\item[{int}]{p,  }\item[{int}]{q,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Help function for getting an inverse of matrices 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em temp} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em p} & row of the matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em q} & column of the matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & size of the matrix to be inversed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns tranpose if passed matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix_calc_a097f01e15bec746e73d4a90308f08564}\label{class_matrix_calc_a097f01e15bec746e73d4a90308f08564}} 
+\index{MatrixCalc@{MatrixCalc}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{Inverse()}{Inverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Matrix\+Calc\+::\+Inverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{m,  }\item[{double \&}]{det }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function for getting inverse of matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}}, determinant of the matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em det} & determinant of the matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns inverse of passed matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix_calc_a93e228bda2d54136eed936993511212b}\label{class_matrix_calc_a93e228bda2d54136eed936993511212b}} 
+\index{MatrixCalc@{MatrixCalc}!Rank@{Rank}}
+\index{Rank@{Rank}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{Rank()}{Rank()}}
+{\footnotesize\ttfamily unsigned Matrix\+Calc\+::\+Rank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function for getting rank of matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns rank of passed matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix_calc_a498076c4699b1e664c90ba83a28231e5}\label{class_matrix_calc_a498076c4699b1e664c90ba83a28231e5}} 
+\index{MatrixCalc@{MatrixCalc}!Split@{Split}}
+\index{Split@{Split}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{Split()}{Split()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Matrix\+Calc\+::\+Split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{m,  }\item[{unsigned}]{rows,  }\item[{unsigned}]{cols,  }\item[{unsigned}]{i,  }\item[{unsigned}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function for cutting out matrix of desired size and from desired coordinates 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em rows} & represents rows of desired matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em cols} & represents columns of desired matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em i} & row coordinate for cutting desired matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em i} & column coordinate for cutting desired matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns matrix of desired size cut out from desired coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix_calc_a5a02ba8bf8e73d8d5799c31f56fad34a}\label{class_matrix_calc_a5a02ba8bf8e73d8d5799c31f56fad34a}} 
+\index{MatrixCalc@{MatrixCalc}!SwapRow@{SwapRow}}
+\index{SwapRow@{SwapRow}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{SwapRow()}{SwapRow()}}
+{\footnotesize\ttfamily void Matrix\+Calc\+::\+Swap\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{m,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function that swap rows in matrices Help function for performing Gaussian elimination 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em row} & to be swapped for \\
+\hline
+\mbox{\texttt{ in}}  & {\em row} & to be swapped \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_matrix_calc_a8c8922e853ec86d5c65f45daae848b36}\label{class_matrix_calc_a8c8922e853ec86d5c65f45daae848b36}} 
+\index{MatrixCalc@{MatrixCalc}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!MatrixCalc@{MatrixCalc}}
+\subsubsection{\texorpdfstring{Transpose()}{Transpose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Matrix\+Calc\+::\+Transpose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function for getting transpose of matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns tranpose of passed matrix 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Matrix\+Calc.\+h\item 
+src/Matrix\+Calc.\+cpp\end{DoxyCompactItemize}

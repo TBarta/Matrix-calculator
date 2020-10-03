@@ -1,0 +1,175 @@
+\hypertarget{class_matrix}{}\section{Matrix Class Reference}
+\label{class_matrix}\index{Matrix@{Matrix}}
+
+
+{\ttfamily \#include $<$Matrix.\+h$>$}
+
+Inheritance diagram for Matrix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_matrix}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_matrix_a9b1c3627f573d78a2f08623fdfef990f}{$\sim$\+Matrix}} ()
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_matrix}{Matrix}} $>$ \mbox{\hyperlink{class_matrix_aae61e88849e7c16bc9fabf0ad5bd20f0}{clone}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_matrix_a0003db86d2ce908119e082b9c35a4fb3}{print}} (std\+::ostream \&os) const =0
+\item 
+virtual void \mbox{\hyperlink{class_matrix_a7b7ac64a3cbb38f4d661ec3a2fddf5f5}{set\+Value}} (unsigned i, unsigned j, double v)=0
+\item 
+std\+::string \mbox{\hyperlink{class_matrix_abc5416c425819f433917650776b86011}{get\+Type}} () const
+\item 
+unsigned \mbox{\hyperlink{class_matrix_a9eb68e94c4ac5213e97188d99a21da10}{get\+Rows}} () const
+\item 
+unsigned \mbox{\hyperlink{class_matrix_aa716da545a2043ad41ee276806976883}{get\+Cols}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{class_matrix_ac1345e89dbffc411f5766c11fc8ebb6a}{rows}}
+\item 
+unsigned \mbox{\hyperlink{class_matrix_af477fcaeda55b1d5b8ace1be7773c209}{cols}}
+\item 
+std\+::string \mbox{\hyperlink{class_matrix_a3f9973bd9a7ad102959ba74e50631db9}{type}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_matrix_afb54f4bb75b4cc6f7d2008d454208a02}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_matrix}{Matrix}} \&x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Parent class for matrix object 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_matrix_a9b1c3627f573d78a2f08623fdfef990f}\label{class_matrix_a9b1c3627f573d78a2f08623fdfef990f}} 
+\index{Matrix@{Matrix}!````~Matrix@{$\sim$Matrix}}
+\index{````~Matrix@{$\sim$Matrix}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{$\sim$Matrix()}{~Matrix()}}
+{\footnotesize\ttfamily Matrix\+::$\sim$\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_matrix_aae61e88849e7c16bc9fabf0ad5bd20f0}\label{class_matrix_aae61e88849e7c16bc9fabf0ad5bd20f0}} 
+\index{Matrix@{Matrix}!clone@{clone}}
+\index{clone@{clone}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_matrix}{Matrix}}$>$ Matrix\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Virtual function for cloning shared pointers on parent class Used later for storing matrices in vector of shared pointers 
+
+Implemented in \mbox{\hyperlink{class_dense_matrix_af6334f6106e2de277daf5affabdca1da}{Dense\+Matrix}}, and \mbox{\hyperlink{class_sparse_matrix_aa130f1050d2fea0a7315e26ccf280433}{Sparse\+Matrix}}.
+
+\mbox{\Hypertarget{class_matrix_aa716da545a2043ad41ee276806976883}\label{class_matrix_aa716da545a2043ad41ee276806976883}} 
+\index{Matrix@{Matrix}!getCols@{getCols}}
+\index{getCols@{getCols}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{getCols()}{getCols()}}
+{\footnotesize\ttfamily unsigned Matrix\+::get\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Function for getting rows of each matrix \begin{DoxyReturn}{Returns}
+Returns number of columns in matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix_a9eb68e94c4ac5213e97188d99a21da10}\label{class_matrix_a9eb68e94c4ac5213e97188d99a21da10}} 
+\index{Matrix@{Matrix}!getRows@{getRows}}
+\index{getRows@{getRows}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{getRows()}{getRows()}}
+{\footnotesize\ttfamily unsigned Matrix\+::get\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Function for getting rows of each matrix \begin{DoxyReturn}{Returns}
+Returns number of rows in matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix_abc5416c425819f433917650776b86011}\label{class_matrix_abc5416c425819f433917650776b86011}} 
+\index{Matrix@{Matrix}!getType@{getType}}
+\index{getType@{getType}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Matrix\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Function for getting type of each matrix \begin{DoxyReturn}{Returns}
+Returns string with type either Dense or Sparse 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matrix_a0003db86d2ce908119e082b9c35a4fb3}\label{class_matrix_a0003db86d2ce908119e082b9c35a4fb3}} 
+\index{Matrix@{Matrix}!print@{print}}
+\index{print@{print}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void Matrix\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Print function for printing matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em os} & ostream \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_dense_matrix_a0bfe50e5f3555d507a50ec52fc15dfa8}{Dense\+Matrix}}, and \mbox{\hyperlink{class_sparse_matrix_afc2c851b26215e7c91eea9fe03e13e84}{Sparse\+Matrix}}.
+
+\mbox{\Hypertarget{class_matrix_a7b7ac64a3cbb38f4d661ec3a2fddf5f5}\label{class_matrix_a7b7ac64a3cbb38f4d661ec3a2fddf5f5}} 
+\index{Matrix@{Matrix}!setValue@{setValue}}
+\index{setValue@{setValue}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily virtual void Matrix\+::set\+Value (\begin{DoxyParamCaption}\item[{unsigned}]{i,  }\item[{unsigned}]{j,  }\item[{double}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Function for setting value of element in matrix on passed certain row and column 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & row coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em j} & column coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & value to be set \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_dense_matrix_a64bf2553677cd22aba4a3811d5d5b6f8}{Dense\+Matrix}}, and \mbox{\hyperlink{class_sparse_matrix_ab958e2d8e207a6590d4ca3d1b10677cd}{Sparse\+Matrix}}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_matrix_afb54f4bb75b4cc6f7d2008d454208a02}\label{class_matrix_afb54f4bb75b4cc6f7d2008d454208a02}} 
+\index{Matrix@{Matrix}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_matrix}{Matrix}} \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Overloaded $<$$<$ operator for printing out the matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em os} & iostream \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & \mbox{\hyperlink{class_matrix}{Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_matrix_af477fcaeda55b1d5b8ace1be7773c209}\label{class_matrix_af477fcaeda55b1d5b8ace1be7773c209}} 
+\index{Matrix@{Matrix}!cols@{cols}}
+\index{cols@{cols}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily unsigned Matrix\+::cols\hspace{0.3cm}{\ttfamily [protected]}}
+
+Storing columns of matrices \mbox{\Hypertarget{class_matrix_ac1345e89dbffc411f5766c11fc8ebb6a}\label{class_matrix_ac1345e89dbffc411f5766c11fc8ebb6a}} 
+\index{Matrix@{Matrix}!rows@{rows}}
+\index{rows@{rows}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily unsigned Matrix\+::rows\hspace{0.3cm}{\ttfamily [protected]}}
+
+Storing rows of matrices \mbox{\Hypertarget{class_matrix_a3f9973bd9a7ad102959ba74e50631db9}\label{class_matrix_a3f9973bd9a7ad102959ba74e50631db9}} 
+\index{Matrix@{Matrix}!type@{type}}
+\index{type@{type}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily std\+::string Matrix\+::type\hspace{0.3cm}{\ttfamily [protected]}}
+
+Storing type of matrix (sparse/dense).Used for future calculations 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Matrix.\+h\item 
+src/Matrix.\+cpp\end{DoxyCompactItemize}

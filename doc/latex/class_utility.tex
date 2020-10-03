@@ -1,0 +1,69 @@
+\hypertarget{class_utility}{}\section{Utility Class Reference}
+\label{class_utility}\index{Utility@{Utility}}
+
+
+{\ttfamily \#include $<$Utility.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char \mbox{\hyperlink{class_utility_af9e6f891ac3ef3d533d6f1c76aee1dcf}{Assigned\+Var}} (std\+::string \&input)
+\item 
+static std\+::string \mbox{\hyperlink{class_utility_a6ff9fad63d7a50296de8bdb927ac9cf3}{Input\+Check}} (std\+::string \&input)
+\item 
+static std\+::string \mbox{\hyperlink{class_utility_a63b0f47067e0b9dd1104ee27726c6f18}{Str\+To\+Upper}} (std\+::string str)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that stores utiliy functions that are needed in \mbox{\hyperlink{class_user_interface}{User\+Interface}} Mainly works with input 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_utility_af9e6f891ac3ef3d533d6f1c76aee1dcf}\label{class_utility_af9e6f891ac3ef3d533d6f1c76aee1dcf}} 
+\index{Utility@{Utility}!AssignedVar@{AssignedVar}}
+\index{AssignedVar@{AssignedVar}!Utility@{Utility}}
+\subsubsection{\texorpdfstring{AssignedVar()}{AssignedVar()}}
+{\footnotesize\ttfamily char Utility\+::\+Assigned\+Var (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks if matrix is assigned to a variable If it is assigned it returns the variable else returns a empty char 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns variable if there is any 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utility_a6ff9fad63d7a50296de8bdb927ac9cf3}\label{class_utility_a6ff9fad63d7a50296de8bdb927ac9cf3}} 
+\index{Utility@{Utility}!InputCheck@{InputCheck}}
+\index{InputCheck@{InputCheck}!Utility@{Utility}}
+\subsubsection{\texorpdfstring{InputCheck()}{InputCheck()}}
+{\footnotesize\ttfamily std\+::string Utility\+::\+Input\+Check (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks input when creating a matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns string of numbers to be added to matrix or and empty string if the input if wrong 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utility_a63b0f47067e0b9dd1104ee27726c6f18}\label{class_utility_a63b0f47067e0b9dd1104ee27726c6f18}} 
+\index{Utility@{Utility}!StrToUpper@{StrToUpper}}
+\index{StrToUpper@{StrToUpper}!Utility@{Utility}}
+\subsubsection{\texorpdfstring{StrToUpper()}{StrToUpper()}}
+{\footnotesize\ttfamily std\+::string Utility\+::\+Str\+To\+Upper (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Takes string and returns it in uppercase 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the passed string in upper case 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Utility.\+h\item 
+src/Utility.\+cpp\end{DoxyCompactItemize}

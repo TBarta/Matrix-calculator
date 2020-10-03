@@ -1,0 +1,145 @@
+\hypertarget{class_sparse_matrix}{}\section{Sparse\+Matrix Class Reference}
+\label{class_sparse_matrix}\index{SparseMatrix@{SparseMatrix}}
+
+
+{\ttfamily \#include $<$Sparse\+Matrix.\+h$>$}
+
+Inheritance diagram for Sparse\+Matrix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sparse_matrix}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sparse_matrix_a0517d870d80dbf4f8a5b548b7f2b3666}{Sparse\+Matrix}} (unsigned m, unsigned n)
+\item 
+\mbox{\hyperlink{class_sparse_matrix_ab2ffd9c0ba0f03b42128e8f064658889}{Sparse\+Matrix}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \&rhs)
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_matrix}{Matrix}} $>$ \mbox{\hyperlink{class_sparse_matrix_aa130f1050d2fea0a7315e26ccf280433}{clone}} () const
+\item 
+virtual void \mbox{\hyperlink{class_sparse_matrix_afc2c851b26215e7c91eea9fe03e13e84}{print}} (std\+::ostream \&os) const
+\item 
+virtual void \mbox{\hyperlink{class_sparse_matrix_ab958e2d8e207a6590d4ca3d1b10677cd}{set\+Value}} (unsigned i, unsigned j, double v)
+\item 
+double \mbox{\hyperlink{class_sparse_matrix_a2ce5d91d0f5106e90c13629db5d9bb59}{operator()}} (const unsigned \&\mbox{\hyperlink{class_matrix_ac1345e89dbffc411f5766c11fc8ebb6a}{rows}}, const unsigned \&\mbox{\hyperlink{class_matrix_af477fcaeda55b1d5b8ace1be7773c209}{cols}}) const
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \mbox{\hyperlink{class_sparse_matrix_a3ad58a60616f7d3d633b1fe96ae4f753}{operator=}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Child class of matrix. It\textquotesingle{}s used for sparse matrices and its numbers are stored in map of value and coordinates of the value. Also has some overloaded operators. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sparse_matrix_a0517d870d80dbf4f8a5b548b7f2b3666}\label{class_sparse_matrix_a0517d870d80dbf4f8a5b548b7f2b3666}} 
+\index{SparseMatrix@{SparseMatrix}!SparseMatrix@{SparseMatrix}}
+\index{SparseMatrix@{SparseMatrix}!SparseMatrix@{SparseMatrix}}
+\subsubsection{\texorpdfstring{SparseMatrix()}{SparseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sparse\+Matrix\+::\+Sparse\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{m,  }\item[{unsigned}]{n }\end{DoxyParamCaption})}
+
+Constructor takes 2 arguments and those are rows and columns of the matrix
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & rows of the matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & columns of the matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sparse_matrix_ab2ffd9c0ba0f03b42128e8f064658889}\label{class_sparse_matrix_ab2ffd9c0ba0f03b42128e8f064658889}} 
+\index{SparseMatrix@{SparseMatrix}!SparseMatrix@{SparseMatrix}}
+\index{SparseMatrix@{SparseMatrix}!SparseMatrix@{SparseMatrix}}
+\subsubsection{\texorpdfstring{SparseMatrix()}{SparseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sparse\+Matrix\+::\+Sparse\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sparse_matrix_aa130f1050d2fea0a7315e26ccf280433}\label{class_sparse_matrix_aa130f1050d2fea0a7315e26ccf280433}} 
+\index{SparseMatrix@{SparseMatrix}!clone@{clone}}
+\index{clone@{clone}!SparseMatrix@{SparseMatrix}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_matrix}{Matrix}} $>$ Sparse\+Matrix\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function for cloning shared pointers on parent class Used later for storing matrices in vector of shared pointers 
+
+Implements \mbox{\hyperlink{class_matrix_aae61e88849e7c16bc9fabf0ad5bd20f0}{Matrix}}.
+
+\mbox{\Hypertarget{class_sparse_matrix_a2ce5d91d0f5106e90c13629db5d9bb59}\label{class_sparse_matrix_a2ce5d91d0f5106e90c13629db5d9bb59}} 
+\index{SparseMatrix@{SparseMatrix}!operator()@{operator()}}
+\index{operator()@{operator()}!SparseMatrix@{SparseMatrix}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily double Sparse\+Matrix\+::operator() (\begin{DoxyParamCaption}\item[{const unsigned \&}]{rows,  }\item[{const unsigned \&}]{cols }\end{DoxyParamCaption}) const}
+
+operator for accessing each element of matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rows} & row coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em cols} & column coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a number which is on stored on the passed coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sparse_matrix_a3ad58a60616f7d3d633b1fe96ae4f753}\label{class_sparse_matrix_a3ad58a60616f7d3d633b1fe96ae4f753}} 
+\index{SparseMatrix@{SparseMatrix}!operator=@{operator=}}
+\index{operator=@{operator=}!SparseMatrix@{SparseMatrix}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} Sparse\+Matrix\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded operator for assigning sparse matrix to another sparse matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sparse_matrix_afc2c851b26215e7c91eea9fe03e13e84}\label{class_sparse_matrix_afc2c851b26215e7c91eea9fe03e13e84}} 
+\index{SparseMatrix@{SparseMatrix}!print@{print}}
+\index{print@{print}!SparseMatrix@{SparseMatrix}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Sparse\+Matrix\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Print function for printing matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em os} & ostream \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_matrix_a0003db86d2ce908119e082b9c35a4fb3}{Matrix}}.
+
+\mbox{\Hypertarget{class_sparse_matrix_ab958e2d8e207a6590d4ca3d1b10677cd}\label{class_sparse_matrix_ab958e2d8e207a6590d4ca3d1b10677cd}} 
+\index{SparseMatrix@{SparseMatrix}!setValue@{setValue}}
+\index{setValue@{setValue}!SparseMatrix@{SparseMatrix}}
+\subsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Sparse\+Matrix\+::set\+Value (\begin{DoxyParamCaption}\item[{unsigned}]{i,  }\item[{unsigned}]{j,  }\item[{double}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function for setting value of element in matrix on passed certain row and column 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & row coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em j} & column coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & value to be set \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_matrix_a7b7ac64a3cbb38f4d661ec3a2fddf5f5}{Matrix}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Sparse\+Matrix.\+h\item 
+src/Sparse\+Matrix.\+cpp\end{DoxyCompactItemize}

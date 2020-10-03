@@ -1,0 +1,257 @@
+\hypertarget{class_dense_matrix}{}\section{Dense\+Matrix Class Reference}
+\label{class_dense_matrix}\index{DenseMatrix@{DenseMatrix}}
+
+
+{\ttfamily \#include $<$Dense\+Matrix.\+h$>$}
+
+Inheritance diagram for Dense\+Matrix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dense_matrix}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dense_matrix_acee504862635b3f43c4c7157a0b835ad}{Dense\+Matrix}} (unsigned m, unsigned n)
+\item 
+\mbox{\hyperlink{class_dense_matrix_a87eb921a0711e71fd0c04a8216e42fd2}{Dense\+Matrix}} (const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&rhs)
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_matrix}{Matrix}} $>$ \mbox{\hyperlink{class_dense_matrix_af6334f6106e2de277daf5affabdca1da}{clone}} () const
+\item 
+virtual void \mbox{\hyperlink{class_dense_matrix_a0bfe50e5f3555d507a50ec52fc15dfa8}{print}} (std\+::ostream \&os) const
+\item 
+virtual void \mbox{\hyperlink{class_dense_matrix_a64bf2553677cd22aba4a3811d5d5b6f8}{set\+Value}} (unsigned i, unsigned j, double v)
+\item 
+double \mbox{\hyperlink{class_dense_matrix_a1a1d7059dbf920083526b4e17b0c1d66}{operator()}} (const unsigned \&\mbox{\hyperlink{class_matrix_ac1345e89dbffc411f5766c11fc8ebb6a}{rows}}, const unsigned \&\mbox{\hyperlink{class_matrix_af477fcaeda55b1d5b8ace1be7773c209}{cols}}) const
+\item 
+\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_dense_matrix_aeb227b489f8f0922dace88ad2e0a3ccf}{operator=}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \&rhs)
+\item 
+\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_dense_matrix_a896beaab3cb4457f7059a69ea7abc616}{operator=}} (const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&rhs)
+\item 
+\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_dense_matrix_a9af4c28ec24e57339d757ed56ea1cd97}{operator+}} (const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&rhs)
+\item 
+\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_dense_matrix_a2fa05956c14587935e9f16713c9993e8}{operator-\/}} (const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&rhs)
+\item 
+\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_dense_matrix_a30fc03840fabac76fe035538d3dd979b}{operator $\ast$}} (const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&rhs)
+\item 
+\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_dense_matrix_a63ea02e032ebbef3f206926868a831dc}{operator+}} (const double \&rhs)
+\item 
+\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_dense_matrix_aaa961b0319f042d0aadc56c598378c44}{operator-\/}} (const double \&rhs)
+\item 
+\mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \mbox{\hyperlink{class_dense_matrix_afe8866f292ef3e14928425cfe5b1f905}{operator $\ast$}} (const double \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Child class of matrix. It\textquotesingle{}s used for dense matrices and its numbers are stored in 2D vector. Also has overloaded operators for basic computations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dense_matrix_acee504862635b3f43c4c7157a0b835ad}\label{class_dense_matrix_acee504862635b3f43c4c7157a0b835ad}} 
+\index{DenseMatrix@{DenseMatrix}!DenseMatrix@{DenseMatrix}}
+\index{DenseMatrix@{DenseMatrix}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{DenseMatrix()}{DenseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Dense\+Matrix\+::\+Dense\+Matrix (\begin{DoxyParamCaption}\item[{unsigned}]{m,  }\item[{unsigned}]{n }\end{DoxyParamCaption})}
+
+Constructor takes 2 arguments and those are rows and columns of the matrix
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & rows of the matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & columns of the matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dense_matrix_a87eb921a0711e71fd0c04a8216e42fd2}\label{class_dense_matrix_a87eb921a0711e71fd0c04a8216e42fd2}} 
+\index{DenseMatrix@{DenseMatrix}!DenseMatrix@{DenseMatrix}}
+\index{DenseMatrix@{DenseMatrix}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{DenseMatrix()}{DenseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Dense\+Matrix\+::\+Dense\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dense_matrix_af6334f6106e2de277daf5affabdca1da}\label{class_dense_matrix_af6334f6106e2de277daf5affabdca1da}} 
+\index{DenseMatrix@{DenseMatrix}!clone@{clone}}
+\index{clone@{clone}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_matrix}{Matrix}} $>$ Dense\+Matrix\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function for cloning shared pointers on parent class Used later for storing matrices in vector of shared pointers 
+
+Implements \mbox{\hyperlink{class_matrix_aae61e88849e7c16bc9fabf0ad5bd20f0}{Matrix}}.
+
+\mbox{\Hypertarget{class_dense_matrix_a30fc03840fabac76fe035538d3dd979b}\label{class_dense_matrix_a30fc03840fabac76fe035538d3dd979b}} 
+\index{DenseMatrix@{DenseMatrix}!operator $\ast$@{operator $\ast$}}
+\index{operator $\ast$@{operator $\ast$}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{operator $\ast$()}{operator *()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Dense\+Matrix\+::operator $\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded operator for multiplying dense matrix by another dense matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dense_matrix_afe8866f292ef3e14928425cfe5b1f905}\label{class_dense_matrix_afe8866f292ef3e14928425cfe5b1f905}} 
+\index{DenseMatrix@{DenseMatrix}!operator $\ast$@{operator $\ast$}}
+\index{operator $\ast$@{operator $\ast$}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{operator $\ast$()}{operator *()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Dense\+Matrix\+::operator $\ast$ (\begin{DoxyParamCaption}\item[{const double \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded operator for multiplying matrix by a number 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dense_matrix_a1a1d7059dbf920083526b4e17b0c1d66}\label{class_dense_matrix_a1a1d7059dbf920083526b4e17b0c1d66}} 
+\index{DenseMatrix@{DenseMatrix}!operator()@{operator()}}
+\index{operator()@{operator()}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily double Dense\+Matrix\+::operator() (\begin{DoxyParamCaption}\item[{const unsigned \&}]{rows,  }\item[{const unsigned \&}]{cols }\end{DoxyParamCaption}) const}
+
+operator for accessing each element of matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rows} & row coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em cols} & column coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a number which is stored on the passed coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dense_matrix_a9af4c28ec24e57339d757ed56ea1cd97}\label{class_dense_matrix_a9af4c28ec24e57339d757ed56ea1cd97}} 
+\index{DenseMatrix@{DenseMatrix}!operator+@{operator+}}
+\index{operator+@{operator+}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Dense\+Matrix\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded operator for adding dense matrix to another dense matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dense_matrix_a63ea02e032ebbef3f206926868a831dc}\label{class_dense_matrix_a63ea02e032ebbef3f206926868a831dc}} 
+\index{DenseMatrix@{DenseMatrix}!operator+@{operator+}}
+\index{operator+@{operator+}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Dense\+Matrix\+::operator+ (\begin{DoxyParamCaption}\item[{const double \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded operator for adding number to a matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dense_matrix_a2fa05956c14587935e9f16713c9993e8}\label{class_dense_matrix_a2fa05956c14587935e9f16713c9993e8}} 
+\index{DenseMatrix@{DenseMatrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Dense\+Matrix\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded operator for subtracting dense matrix from another dense matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dense_matrix_aaa961b0319f042d0aadc56c598378c44}\label{class_dense_matrix_aaa961b0319f042d0aadc56c598378c44}} 
+\index{DenseMatrix@{DenseMatrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Dense\+Matrix\+::operator-\/ (\begin{DoxyParamCaption}\item[{const double \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded operator for subtracting number from a matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dense_matrix_aeb227b489f8f0922dace88ad2e0a3ccf}\label{class_dense_matrix_aeb227b489f8f0922dace88ad2e0a3ccf}} 
+\index{DenseMatrix@{DenseMatrix}!operator=@{operator=}}
+\index{operator=@{operator=}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Dense\+Matrix\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded operator for assigning sparse matrix to a dense matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dense_matrix_a896beaab3cb4457f7059a69ea7abc616}\label{class_dense_matrix_a896beaab3cb4457f7059a69ea7abc616}} 
+\index{DenseMatrix@{DenseMatrix}!operator=@{operator=}}
+\index{operator=@{operator=}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} Dense\+Matrix\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded operator for assigning dense matrix to another dense matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \mbox{\hyperlink{class_dense_matrix}{Dense\+Matrix}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dense_matrix_a0bfe50e5f3555d507a50ec52fc15dfa8}\label{class_dense_matrix_a0bfe50e5f3555d507a50ec52fc15dfa8}} 
+\index{DenseMatrix@{DenseMatrix}!print@{print}}
+\index{print@{print}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Dense\+Matrix\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Print function for printing matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em os} & ostream \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_matrix_a0003db86d2ce908119e082b9c35a4fb3}{Matrix}}.
+
+\mbox{\Hypertarget{class_dense_matrix_a64bf2553677cd22aba4a3811d5d5b6f8}\label{class_dense_matrix_a64bf2553677cd22aba4a3811d5d5b6f8}} 
+\index{DenseMatrix@{DenseMatrix}!setValue@{setValue}}
+\index{setValue@{setValue}!DenseMatrix@{DenseMatrix}}
+\subsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Dense\+Matrix\+::set\+Value (\begin{DoxyParamCaption}\item[{unsigned}]{i,  }\item[{unsigned}]{j,  }\item[{double}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function for setting value of element in matrix on passed certain row and column 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & row coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em j} & column coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & value to be set \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_matrix_a7b7ac64a3cbb38f4d661ec3a2fddf5f5}{Matrix}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Dense\+Matrix.\+h\item 
+src/Dense\+Matrix.\+cpp\end{DoxyCompactItemize}
